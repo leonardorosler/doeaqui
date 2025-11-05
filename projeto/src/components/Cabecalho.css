@@ -1,0 +1,193 @@
+/* Fundo temporário */
+.main-fundo {
+    height: 50rem; /* h-64 = 256px (64 * 4px) */
+    background-image: url('/fundo-verde-azul.jpg');
+    background-position: center;   /* bg-center */
+    background-size: cover;        /* bg-cover */
+    background-repeat: no-repeat;  /* bg-no-repeat */
+}
+
+.cabecalho {
+  font-family: 'Segoe UI';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  background-color: #EEEEEE;
+  padding: 20px 30px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+}
+
+.cabecalho__logo {
+  flex-shrink: 0;
+}
+
+.cabecalho__logo img {
+  width: 200px;
+  height: auto;
+}
+
+/* Menu Desktop */
+.menu {
+  display: none;
+  gap: 30px;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.menu img{
+  width: 20px;
+  height: auto;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.menu a:hover {
+  background-color: rgba(87, 171, 201, 0.1);
+  color: rgb(87, 171, 201);
+}
+
+/* Pesquisar Desktop */
+.pesquisar-desktop {
+  display: none;
+}
+.pesquisar-desktop img{
+  width: 20px;
+  height: auto;
+}
+
+.pesquisar-desktop p {
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 0;
+  gap: 4px;
+}
+
+.pesquisar-desktop p:hover {
+  background-color: rgba(87, 171, 201, 0.1);
+  color: rgb(87, 171, 201);
+}
+
+/* Container do Menu Mobile */
+.menu-toggle-container {
+  position: relative;
+  display: block;
+}
+
+/* Botão Hamburguer */
+.menu-toggle {
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle:hover {
+  color: rgb(87, 171, 201);
+  transform: scale(1.1);
+}
+
+
+
+/* Menu Mobile Dropdown */
+.menu-mobile {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 15px 0;
+  min-width: 250px;
+  z-index: 1001;
+  animation: slideDown 0.3s ease;
+}
+
+
+.menu-mobile a,
+.menu-mobile button {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding: 15px 25px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-mobile a:hover,
+.menu-mobile button:hover {
+  background-color: rgba(87, 171, 201, 0.1);
+  color: rgb(87, 171, 201);
+}
+.menu-mobile img{
+  width: 24px;
+  height: auto;
+}
+.menu-mobile-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 10px 0;
+}
+
+/* RESPONSIVO - TABLET E DESKTOP */
+@media (min-width: 769px) {
+  .cabecalho {
+    padding: 25px 40px;
+  }
+
+  /* Mostrar menu desktop */
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Mostrar pesquisar no desktop */
+  .pesquisar-desktop {
+    display: block;
+  }
+
+  /* Esconder hamburguer no desktop */
+  .menu-toggle-container {
+    display: none;
+  }
+}

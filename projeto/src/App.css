@@ -1,1 +1,102 @@
-@import "tailwindcss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-fundo {
+    height: 10rem;
+    background-image: url('/fundo-verde-azul.jpg');
+    background-position: center;
+    /* bg-center */
+    background-size: cover;
+    /* bg-cover */
+    background-repeat: no-repeat;
+    /* bg-no-repeat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div que contém imagem e textos */
+.main__div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Imagem */
+.main__img {
+    height: 120px;
+    width: auto;
+}
+
+
+/* Container de textos */
+.main__textos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título principal */
+.main__titulo {
+    font-size: 2.3rem;
+    font-weight: 650;
+    color: #ffffff;
+}
+
+/* Subtítulo */
+.main__sutitulo {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+}
+
+.main__botao {
+    margin-top: 15px;
+    padding: 10px 60px;
+    background-color: #ffffff00;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.main__botao:hover {
+    background-color: #2c5d9a75;
+}
+
+@media (min-width: 769px) {
+    .main-fundo {
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        padding-bottom: 7rem;
+        padding-left: 4rem;
+    }
+
+    .main__img {
+        height: 200px;
+        width: auto;
+    }
+
+    .main__titulo{
+        font-size: 4rem;
+    }
+
+    .main__sutitulo{
+        font-size: 1.5rem;
+    }
+
+    .main__botao{
+        
+    }
+}

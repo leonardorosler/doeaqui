@@ -1,26 +1,69 @@
-import './Cabecalho.css'
+import { useState } from 'react';
+import './Cabecalho.css';
 
+export default function Header() {
+  const [menuAberto, setMenuAberto] = useState(false);
 
-export default function Cabecalho() {
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
+  const fecharMenu = () => {
+    setMenuAberto(false);
+  };
+
   return (
-     <header className="bg-white shadow-lg flex justify-between">
-        <div className='flex items-center p-2 gap-2'>
-            <div className='w-12 h-12 rounded-2xl  bg-gradient-to-r from-[#10ceb2] to-[#ae9ff2]'>
-                <img src="aperto-de-mao.png" className='p-2 items-center justify-center'/>            
-            </div>
-            <div>
-                <h1 className="text-2xl font-bold text-gray-800">DoeAqui</h1>
-            </div>
+    <>
+      <header className="cabecalho">
+        <div className="cabecalho__logo">
+          <img src="/doeaqui-logo-img-nome.png" alt="logo-doeaqui" />
         </div>
-        <div className='flex justify-around gap-1 p-3 items-center mr-5'>
-            <img src="map-pin.png" alt="alfinete de localização" className='w-6'/>
-            <p>
-                <select id="cidade">
-                <option value="pelrs">Pelotas - RS</option>
-                <option value="cancucurs">Canguçu - RS</option>
-                </select>
-            </p>
+
+        {/* Menu Desktop */}
+        <nav className="menu">
+          <a href="#"><img src="/home.png"/>Página principal</a>
+          <a href="#"><img src="/doar.png"/>Doar agora</a>
+          <a href="#"><img src="/solicitar.png"/>Solicitar doação</a>
+          <a href="#"><img src="/sobre nos.png"/>Sobre nós</a>
+        </nav>
+
+        {/* Pesquisar (Desktop) */}
+        <div className="pesquisar-desktop">
+          <p><img src="pesquisa.png" alt="" />Pesquisar</p>
         </div>
-    </header>
-  )
+
+        {/* Botão Hamburguer (Mobile) */}
+        <div className="menu-toggle-container">
+          <button
+            className="menu-toggle"
+            onClick={toggleMenu}
+            aria-label="Menu"
+          >
+            ☰
+          </button>
+
+          {/* Overlay para fechar ao clicar fora */}
+          {menuAberto && (
+            <div 
+              className="menu-overlay"
+              onClick={fecharMenu}
+            />
+          )}
+          
+          {/* Menu Mobile Dropdown */}
+          {menuAberto && (
+            <div className="menu-mobile">
+              <a href="#" onClick={fecharMenu}><img src="/home.png"/>Home</a>
+              <a href="#" onClick={fecharMenu}><img src="/doar.png"/>Doar agora</a>
+              <a href="#" onClick={fecharMenu}><img src="/solicitar.png"/>Solicitar doação</a>
+              <a href="#" onClick={fecharMenu}><img src="/sobre nos.png"/>Sobre nós</a>
+              <div className="menu-mobile-divider"></div>
+              <button onClick={fecharMenu}><img src="/pesquisa.png"/>Pesquisar</button>
+            </div>
+          )}
+        </div>
+      </header>
+
+    </>
+  );
 }
