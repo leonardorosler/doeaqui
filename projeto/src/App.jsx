@@ -1,10 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Cabecalho from './components/Cabecalho'
+import ListaDoacoes from './components/ListaDoacoes'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [doacoes, setDoacoes] = useState([])
+
+  useEffect(() => {
+    async function buscarDoacoes() {
+      const resposta = await fetch("http://localhost:3000/doacoes")
+      const dados = await resposta.json()
+      setDoacoes(dados)
+    }
+    buscarDoacoes()
+  }, [])
+
 
   return (
     <>
@@ -19,6 +31,7 @@ function App() {
             </div>
           </div>
       </main>
+      <ListaDoacoes doacoes={doacoes} setDoacoes={setDoacoes} />
     </>
   )
 }
