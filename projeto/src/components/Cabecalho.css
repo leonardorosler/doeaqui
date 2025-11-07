@@ -67,6 +67,7 @@
 /* Pesquisar Desktop */
 .pesquisar-desktop {
   display: none;
+  text-decoration: none;
 }
 .pesquisar-desktop img{
   width: 20px;

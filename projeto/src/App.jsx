@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Cabecalho from './components/Cabecalho'
 import ListaDoacoes from './components/ListaDoacoes'
+import { Link } from 'react-router-dom';
+
 
 
 function App() {
@@ -27,7 +29,9 @@ function App() {
             <div className='main__textos'>
               <h1 className='main__titulo'>doeaqui!</h1>
               <h3 className='main__sutitulo'>"Sua doação, nossa missão."</h3>
-              <button className='main__botao'>doeaqui!</button>
+              <Link to="/doar">
+                <button className='main__botao'>doeaqui!</button>
+              </Link>
             </div>
           </div>
       </main>

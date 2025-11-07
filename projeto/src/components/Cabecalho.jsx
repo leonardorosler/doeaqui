@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Cabecalho.css';
+
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -16,21 +18,31 @@ export default function Header() {
     <>
       <header className="cabecalho">
         <div className="cabecalho__logo">
-          <img src="/doeaqui-logo-img-nome.png" alt="logo-doeaqui" />
+          <Link to="/">
+            <img src="/doeaqui-logo-img-nome.png" alt="logo-doeaqui" />
+          </Link>
         </div>
 
         {/* Menu Desktop */}
         <nav className="menu">
-          <a href="#"><img src="/home.png"/>Página principal</a>
-          <a href="#"><img src="/doar.png"/>Doar agora</a>
-          <a href="#"><img src="/solicitar.png"/>Solicitar doação</a>
-          <a href="#"><img src="/sobre nos.png"/>Sobre nós</a>
+          <Link to="/">
+            <img src="/home.png" alt="Home"/>Página principal
+          </Link>
+          <Link to="/doar">
+            <img src="/doar.png" alt="Doar"/>Doar agora
+          </Link>
+          <Link to="/solicitar">
+            <img src="/solicitar.png" alt="Solicitar"/>Solicitar doação
+          </Link>
+          <Link to="/sobre">
+            <img src="/sobre nos.png" alt="Sobre"/>Sobre nós
+          </Link>
         </nav>
 
         {/* Pesquisar (Desktop) */}
-        <div className="pesquisar-desktop">
-          <p><img src="pesquisa.png" alt="" />Pesquisar</p>
-        </div>
+        <Link to="/pesquisa" className="pesquisar-desktop">
+          <p><img src="pesquisa.png" alt="Pesquisar" />Pesquisar</p>
+        </Link>
 
         {/* Botão Hamburguer (Mobile) */}
         <div className="menu-toggle-container">
@@ -53,17 +65,26 @@ export default function Header() {
           {/* Menu Mobile Dropdown */}
           {menuAberto && (
             <div className="menu-mobile">
-              <a href="#" onClick={fecharMenu}><img src="/home.png"/>Home</a>
-              <a href="#" onClick={fecharMenu}><img src="/doar.png"/>Doar agora</a>
-              <a href="#" onClick={fecharMenu}><img src="/solicitar.png"/>Solicitar doação</a>
-              <a href="#" onClick={fecharMenu}><img src="/sobre nos.png"/>Sobre nós</a>
+              <Link to="/" onClick={fecharMenu}>
+                <img src="/home.png" alt="Home"/>Página principal
+              </Link>
+              <Link to="/doar" onClick={fecharMenu}>
+                <img src="/doar.png" alt="Doar"/>Doar agora
+              </Link>
+              <Link to="/solicitar" onClick={fecharMenu}>
+                <img src="/solicitar.png" alt="Solicitar"/>Solicitar doação
+              </Link>
+              <Link to="/sobre" onClick={fecharMenu}>
+                <img src="/sobre nos.png" alt="Sobre"/>Sobre nós
+              </Link>
               <div className="menu-mobile-divider"></div>
-              <button onClick={fecharMenu}><img src="/pesquisa.png"/>Pesquisar</button>
+              <Link to="/pesquisa" onClick={fecharMenu}>
+                <img src="/pesquisa.png" alt="Pesquisar"/>Pesquisar
+              </Link>
             </div>
           )}
         </div>
       </header>
-
     </>
   );
 }
