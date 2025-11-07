@@ -1,15 +1,26 @@
-
-
 {
-  "livros": [
+  "doacoes": [
     {
       "id": "1",
-      "titulo": "",
-      "autor": "",
-      "genero": "",
-      "editora": "",
-      "ano": 2012,
-      "imagem": ""
+      "item": "Roupas de inverno infantil",
+      "categoria": "Roupas",
+      "localizacao": "Pelotas - RS",
+      "doador": "Maria Silva",
+      "descricao": "Casacos, calças e sapatos em ótimo estado, tamanhos 4-8 anos"
+    },{
+      "id": "2",
+      "item": "Alimentos não pereciveis",
+      "categoria": "Alimentos",
+      "localizacao": "Pelotas - RS",
+      "doador": "Joao Vitor",
+      "descricao": "Arroz, feijão, macarrão e conservas com validade longa"
+    },{
+      "id": "3",
+      "item": "Sofa de 3 lugares",
+      "categoria": "Móveis",
+      "localizacao": "Pelotas - RS",
+      "doador": "Pedro Pedra",
+      "descricao": "Sofá em bom estado, cor bege, precisa de retirada no local"
     }
   ]
 }
