@@ -1,4 +1,5 @@
 import Cabecalho from './components/Cabecalho'
+import './SobreNos.css'
 
 export default function SobreNos(){
     return(

@@ -1,4 +1,5 @@
 import Cabecalho from './components/Cabecalho'
+import './Pesquisa.css'
 
 export default function Pesquisa(){
     return(

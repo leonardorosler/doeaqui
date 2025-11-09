@@ -1,4 +1,5 @@
 import Cabecalho from './components/Cabecalho'
+import './Solicitar.css'
 
 export default function Solicitar(){
     return(
