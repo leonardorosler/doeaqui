@@ -4,22 +4,23 @@
     box-sizing: border-box;
 }
 
-.main-fundo {
-    height: 10rem;
+body {
     background-image: url('/fundo-verde-azul.jpg');
     background-position: center;
-    /* bg-center */
     background-size: cover;
-    /* bg-cover */
     background-repeat: no-repeat;
-    /* bg-no-repeat */
+    background-attachment: fixed;
+}
+
+.hero {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* Div que contém imagem e textos */
-.main__div {
+.hero__conteudo {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -27,38 +28,51 @@
     gap: 10px;
 }
 
+.hero__conteudo {
+    animation: slideLeft linear;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+}
+
+@keyframes slideLeft {
+    to {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+}
+
 /* Imagem */
-.main__img {
+.hero__img {
     height: 120px;
     width: auto;
 }
 
 
 /* Container de textos */
-.main__textos {
+.hero__textos {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: px;
+    gap: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Título principal */
-.main__titulo {
+.hero__titulo {
     font-size: 2.3rem;
     font-weight: 650;
     color: #ffffff;
 }
 
 /* Subtítulo */
-.main__sutitulo {
+.hero__sutitulo {
     font-size: 1.1rem;
     font-weight: 400;
     color: #ffffff;
     margin: 0;
 }
 
-.main__botao {
+.hero__botao {
     margin-top: 15px;
     padding: 10px 60px;
     background-color: #ffffff00;
@@ -68,14 +82,15 @@
     border: 1px solid #ffffff;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.main__botao:hover {
+.hero__botao:hover {
     background-color: #2c5d9a75;
 }
 
 @media (min-width: 769px) {
-    .main-fundo {
+    .hero {
         display: flex;
         justify-content: start;
         align-items: end;
@@ -83,20 +98,16 @@
         padding-left: 4rem;
     }
 
-    .main__img {
+    .hero__img {
         height: 200px;
         width: auto;
     }
 
-    .main__titulo{
+    .hero__titulo{
         font-size: 4rem;
     }
 
-    .main__sutitulo{
+    .hero__sutitulo{
         font-size: 1.5rem;
-    }
-
-    .main__botao{
-        
     }
 }

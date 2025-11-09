@@ -21,22 +21,24 @@ function App() {
 
 
   return (
-    <>
+    <div className='app'>
       <Cabecalho />
-      <main className="main-fundo">
-          <div className='main__div'>
-            <img src="heart-handshake branco.png" className='main__img'/>
-            <div className='main__textos'>
-              <h1 className='main__titulo'>doeaqui!</h1>
-              <h3 className='main__sutitulo'>"Sua doação, nossa missão."</h3>
+      <main>
+        <section className="hero">
+          <div className='hero__conteudo'>
+            <img src="heart-handshake branco.png" className='hero__img'/>
+            <div className='hero__textos'>
+              <h1 className='hero__titulo'>doeaqui!</h1>
+              <h3 className='hero__sutitulo'>"Sua doação, nossa missão."</h3>
               <Link to="/doar">
-                <button className='main__botao'>doeaqui!</button>
+                <button className='hero__botao'>doeaqui!</button>
               </Link>
             </div>
           </div>
+      </section>
       </main>
       <ListaDoacoes doacoes={doacoes} setDoacoes={setDoacoes} />
-    </>
+    </div>
   )
 }
 
