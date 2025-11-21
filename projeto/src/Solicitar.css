@@ -1,0 +1,149 @@
+.main-solicitar {
+    background-color: rgb(228, 228, 228);
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-solicitar h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    margin-top: 7rem;
+}
+
+.main-solicitar form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-solicitar form p {
+    margin-bottom: 1.5rem;
+}
+
+.main-solicitar label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.main-solicitar input[type="text"],
+.main-solicitar select,
+.main-solicitar textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.main-solicitar select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.main-solicitar select:hover {
+    border-color: #07B9D5;
+}
+
+.main-solicitar input[type="text"]:focus,
+.main-solicitar select:focus,
+.main-solicitar textarea:focus {
+    outline: none;
+    border-color: #07B9D5;
+}
+
+.main-solicitar input[type="text"]::placeholder,
+.main-solicitar textarea::placeholder {
+    color: #999;
+}
+
+.main-solicitar select option {
+    padding: 0.5rem;
+}
+
+.main-solicitar select option:first-child {
+    color: #999;
+}
+
+.main-solicitar textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.main-solicitar .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-solicitar .btn.submit {
+    background-color: #07B9D5;
+    color: white;
+}
+
+.main-solicitar .btn.submit:hover {
+    background-color: #0599b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(7, 185, 213, 0.3);
+}
+
+.main-solicitar .btn.reset {
+    background-color: #6c757d;
+    color: white;
+}
+
+.main-solicitar .btn.reset:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+.main-solicitar .margem-esq {
+    margin-left: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-solicitar {
+        padding: 1rem;
+    }
+
+    .main-solicitar h1 {
+        font-size: 2rem;
+    }
+
+    .main-solicitar form {
+        padding: 1.5rem;
+    }
+
+    .main-solicitar .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .main-solicitar .margem-esq {
+        margin-left: 0;
+    }
+}

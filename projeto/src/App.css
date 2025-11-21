@@ -4,15 +4,13 @@
     box-sizing: border-box;
 }
 
-body {
+
+.hero {
     background-image: url('/fundo-verde-azul.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.hero {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -89,6 +87,10 @@ body {
     background-color: #2c5d9a75;
 }
 
+.pesquisa{
+
+}
+
 @media (min-width: 769px) {
     .hero {
         display: flex;
@@ -110,4 +112,6 @@ body {
     .hero__sutitulo{
         font-size: 1.5rem;
     }
+    
+    
 }

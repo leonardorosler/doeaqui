@@ -1,0 +1,51 @@
+.cardPesquisaHome{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-block: 3rem;
+    background-color: rgb(228, 228, 228);
+}
+
+.cardPesquisaHome h1{
+    
+}
+
+.formPesquisaHome{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.campoPesquisaHome{
+    border-width: 2px;
+    border-color: #07B9D5;
+    border-radius: 8px; 
+    width: 75%;
+    height: 2.5rem;
+    padding-left: 1rem;
+}
+.btnPesquisaHomeImg{
+    width: 40px;
+    cursor: pointer;
+    background-color: #07b9d5ac;
+    padding: 5px;
+    border-radius: 1rem;
+}
+.container01{
+    background-color: rgb(228, 228, 228);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.texto{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 0.9rem;
+    padding-top: 8rem;
+}
+.texto p{
+    padding-top: 1rem;
+}
+@media (min-width: 769px) {
+    .texto{
+    font-size: 1rem;
+    }
+}

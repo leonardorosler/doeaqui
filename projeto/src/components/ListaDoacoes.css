@@ -1,16 +1,17 @@
-Reset e configurações base
+
 * {
   box-sizing: border-box;
 }
 
 /* Container principal dos cards */
 .doacao-card {
+  background-color: rgb(228, 228, 228);
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   padding: 20px;
   width: 100%;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -30,6 +31,8 @@ Reset e configurações base
   width: 100%;
   display: flex;
   flex-direction: column;
+  width: full;
+  background-color: white;
 } 
 
 .cardDoacao:hover {
@@ -48,23 +51,16 @@ Reset e configurações base
   color: #4a5568;
   font-size: 0.95rem;
   font-weight: 500; 
-  /* text-transform: uppercase; */
   letter-spacing: 0.5px;
   margin-bottom: 8px;
-  word-wrap: break-word;
+  
 }
-/* .doacaoTipo{
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  background-color: #4ec0bc;
-  text-align: center;
-  border-radius: 0.5rem;
-  color: #ffffff;
-} */
+
  .Doador{
   text-transform: uppercase;
+  width: f;
   margin-bottom: 2rem;
-  background-color: #56c04e;
+  background-color: #07B9D5;
   text-align: center;
   border-radius: 0.5rem;
   color: #ffffff;
@@ -76,10 +72,11 @@ Reset e configurações base
   text-align: center;
   border-radius: 0.5rem;
   color: #ffffff;
-  background-color: rgb(215, 55, 14);
- }
-.cardDoacao h1 {
-  color: #482d2d;
+  /* background-color: #37c7c7; */
+  background-color: #0DD4F2;
+}
+.cardDoacao h1 {  
+  color: #0b0707;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 30px;
@@ -113,13 +110,40 @@ Reset e configurações base
   overflow-wrap: break-word;
 }
 
-.cardDoacao button{
-  background-color: #39B9BC;
+.cardDoacao img{
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.btn-favorito,
+.btn-favorito-destaque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #07b9d567;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  padding-left: 8px;
+  border-radius: 0.7rem;
+  height: 2.3rem;
+}
+
+.btn-favorito img,
+.btn-favorito-destaque img {
+  width: 22px;
+  height: 22px;
+}
+
+
+.contato_button{
+  /* background-color: #34a1a3; */
+  background-color: #07B9D5;
   color: white;
   font-weight: 600;
   height: 2.3rem;
-  /* width: 15rem; */
-  margin-top: 1rem;
+  width: 95%; 
   border: none;
   border-radius: 0.7rem;
   display: flex;
@@ -128,11 +152,13 @@ Reset e configurações base
   gap: 0.4rem;
 }
 
-.cardDoacao img{
-  width: 20px;
-  height: auto;
-  margin-right: 5px;
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 1rem;
 }
+
 
 /* Tablet - 2 colunas */
 @media (min-width: 768px) {

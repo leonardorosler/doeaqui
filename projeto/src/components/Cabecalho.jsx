@@ -39,9 +39,9 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Pesquisar (Desktop) */}
-        <Link to="/pesquisa" className="pesquisar-desktop">
-          <p><img src="pesquisa.png" alt="Pesquisar" />Pesquisar</p>
+        {/* Favoritos (Desktop) */}
+        <Link to="/favoritos" className="pesquisar-desktop">
+          <p><img src="heart.png" alt="Pesquisar" />Favoritos</p>
         </Link>
 
         {/* Botão Hamburguer (Mobile) */}
@@ -78,8 +78,8 @@ export default function Header() {
                 <img src="/sobre nos.png" alt="Sobre"/>Sobre nós
               </Link>
               <div className="menu-mobile-divider"></div>
-              <Link to="/pesquisa" onClick={fecharMenu}>
-                <img src="/pesquisa.png" alt="Pesquisar"/>Pesquisar
+              <Link to="/favoritos" onClick={fecharMenu}>
+                <img src="/heart.png" alt="Favoritos"/>Favoritos
               </Link>
             </div>
           )}

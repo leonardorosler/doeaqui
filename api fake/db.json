@@ -6,21 +6,53 @@
       "categoria": "Roupas",
       "localizacao": "Pelotas - RS",
       "doador": "Maria Silva",
-      "descricao": "Casacos, calças e sapatos em ótimo estado, tamanhos 4-8 anos"
-    },{
+      "descricao": "Casacos, calças e sapatos em ótimo estado, tamanhos 4-8 anos",
+      "tipo": "Oferta"
+    },
+    {
       "id": "2",
       "item": "Alimentos não pereciveis",
       "categoria": "Alimentos",
       "localizacao": "Pelotas - RS",
       "doador": "Joao Vitor",
-      "descricao": "Arroz, feijão, macarrão e conservas com validade longa"
-    },{
+      "descricao": "Arroz, feijão, macarrão e conservas com validade longa",
+      "tipo": "Oferta"
+    },
+    {
       "id": "3",
       "item": "Sofa de 3 lugares",
       "categoria": "Móveis",
       "localizacao": "Pelotas - RS",
       "doador": "Pedro Pedra",
-      "descricao": "Sofá em bom estado, cor bege, precisa de retirada no local"
+      "descricao": "Sofá em bom estado, cor bege, precisa de retirada no local",
+      "tipo": "Oferta"
+    },
+    {
+      "id": "4",
+      "item": "Eletrodomésticos básicos",
+      "categoria": "Eletrodomésticos",
+      "localizacao": "Pelotas - RS",
+      "doador": "Pedro Pedra",
+      "descricao": "Precisamos de eletrodomésticos como geladeira e fogão, pois perdemos na enchente",
+      "tipo": "Pedido"
+    },
+    {
+      "id": "c08b",
+      "item": "Churraqueira controle remoto",
+      "categoria": "Eletrodomésticos",
+      "localizacao": "Pelotas - RS",
+      "doador": "Juninho Capixaba",
+      "descricao": "Churrasqueira nova, estou doando pq pegou fogo no faustão",
+      "tipo": "Oferta"
+    },
+    {
+      "id": "899c",
+      "item": "Cama",
+      "categoria": "Móveis",
+      "localizacao": "Pestano - Pelotas",
+      "doador": "Brendon Tailor",
+      "descricao": "cpx to precisando de uma cama pra vender e compra pedra",
+      "tipo": "Pedido"
     }
   ]
 }

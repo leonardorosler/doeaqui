@@ -3,12 +3,15 @@ import './App.css'
 import Cabecalho from './components/Cabecalho'
 import ListaDoacoes from './components/ListaDoacoes'
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import PesquisaHome from './PesquisaHome';
 
 
 
 function App() {
 
   const [doacoes, setDoacoes] = useState([])
+
 
   useEffect(() => {
     async function buscarDoacoes() {
@@ -26,7 +29,7 @@ function App() {
       <main>
         <section className="hero">
           <div className='hero__conteudo'>
-            <img src="heart-handshake branco.png" className='hero__img'/>
+            <img src="heart-handshake branco.png" className='hero__img' />
             <div className='hero__textos'>
               <h1 className='hero__titulo'>doeaqui!</h1>
               <h3 className='hero__sutitulo'>"Sua doação, nossa missão."</h3>
@@ -35,9 +38,12 @@ function App() {
               </Link>
             </div>
           </div>
-      </section>
+        </section>
+        <section className='pesquisa'>
+          <PesquisaHome />
+          {/* <ListaDoacoes doacoes={doacoes} setDoacoes={setDoacoes} /> */}
+        </section>
       </main>
-      <ListaDoacoes doacoes={doacoes} setDoacoes={setDoacoes} />
     </div>
   )
 }
