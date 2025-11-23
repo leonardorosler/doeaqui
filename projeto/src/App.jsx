@@ -5,6 +5,7 @@ import ListaDoacoes from './components/ListaDoacoes'
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import PesquisaHome from './PesquisaHome';
+import Footer from './components/Footer';
 
 
 
@@ -33,9 +34,6 @@ function App() {
             <div className='hero__textos'>
               <h1 className='hero__titulo'>doeaqui!</h1>
               <h3 className='hero__sutitulo'>"Sua doação, nossa missão."</h3>
-              <Link to="/doar">
-                <button className='hero__botao'>doeaqui!</button>
-              </Link>
             </div>
           </div>
         </section>
@@ -44,6 +42,7 @@ function App() {
           {/* <ListaDoacoes doacoes={doacoes} setDoacoes={setDoacoes} /> */}
         </section>
       </main>
+      <Footer />
     </div>
   )
 }

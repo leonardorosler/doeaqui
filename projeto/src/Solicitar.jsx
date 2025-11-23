@@ -4,6 +4,7 @@ import './Solicitar.css'
 import { useForm } from 'react-hook-form'
 import ListaDoacoes from './components/ListaDoacoes';
 import PesquisaHome from './PesquisaHome'
+import Footer from './components/Footer';
 
 export default function Solicitar() {
     const [doacoes, setDoacoes] = useState([]);
@@ -14,6 +15,7 @@ export default function Solicitar() {
         const categoria = data.categoria
         const localizacao = data.localizacao
         const doador = data.doador
+        const whatsapp = data.whatsapp
         const descricao = data.descricao
         const tipo = "Pedido"
 
@@ -22,7 +24,7 @@ export default function Solicitar() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    item, categoria, localizacao, doador, descricao, tipo
+                    item, categoria, localizacao, doador, whatsapp, descricao, tipo
                 })
             })
             if (!resposta.ok) throw new Error("Erro ao cadastrar pedido")
@@ -42,23 +44,23 @@ export default function Solicitar() {
         <div>
             <Cabecalho />
             <main className='main-solicitar'>
-                <h1>Formulário de Solicitação</h1>
+                <h1>Solicitar Doação <img src="solicitar.png"/></h1>
                 <form onSubmit={handleSubmit(cadastraPedido)}>
                     <p>
                         <label htmlFor="item">O que você precisa?</label>
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             id="item"
-                            {...register("item")} 
+                            {...register("item")}
                             placeholder='Ex: Roupas de inverno infantil'
                             required
                         />
                     </p>
                     <p>
                         <label htmlFor="categoria">Categoria:</label>
-                        <select 
+                        <select
                             id="categoria"
-                            {...register("categoria")} 
+                            {...register("categoria")}
                             required
                         >
                             <option value="">Selecione uma categoria</option>
@@ -72,28 +74,30 @@ export default function Solicitar() {
                     </p>
                     <p>
                         <label htmlFor="localizacao">Localização:</label>
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             id="localizacao"
-                            {...register("localizacao")} 
+                            {...register("localizacao")}
                             placeholder='Ex: Pelotas - RS'
                             required
                         />
                     </p>
                     <p>
                         <label htmlFor="doador">Seu Nome:</label>
-                        <input 
-                            type="text" 
-                            id="doador"
-                            {...register("doador")} 
+                        <input type="text" id="doador"
+                            {...register("doador")}
                             placeholder='Seu nome'
                             required
                         />
                     </p>
                     <p>
+                        <label htmlFor="whatsapp">Número de whatsapp para contato: (com DDD)</label>
+                        <input type="text" id='whatsapp' {...register("whatsapp")} placeholder='Ex: 53999882722' required />
+                    </p>
+                    <p>
                         <label htmlFor="descricao">Descrição do Pedido:</label>
-                        <textarea 
-                            id="descricao" 
+                        <textarea
+                            id="descricao"
                             rows={3}
                             {...register("descricao")}
                             placeholder='Descreva o que você precisa em detalhes'
@@ -106,6 +110,7 @@ export default function Solicitar() {
             </main>
             <PesquisaHome />
             {/* <ListaDoacoes doacoes={doacoes} setDoacoes={setDoacoes} /> */}
+            <Footer />
         </div>
     )
 }

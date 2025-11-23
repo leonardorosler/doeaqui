@@ -58,6 +58,9 @@ export default function ListaDoacoes({ doacoes, setDoacoes }) {
     if (tipo == "Pedido") return "Receptor"
   }
 
+  const getLinkWhatsapp = (whatsapp) => {
+    return `https://wa.me/55${whatsapp}`
+  }
   return (
     <div className='doacao-card'>
       {doacoes?.map(doacao => (
@@ -75,7 +78,7 @@ export default function ListaDoacoes({ doacoes, setDoacoes }) {
             </div>
             <div className="acoes">
               <button className='contato_button'>
-                Entrar em contato <img src="contato.png" />
+                <a href={getLinkWhatsapp(doacao.whatsapp)} target="_blank">Entrar em contato <img src="contato.png" alt="" /></a>
               </button>
 
               {favoritos.includes(doacao.id) ?

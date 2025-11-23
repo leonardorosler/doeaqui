@@ -3,7 +3,7 @@ import './PesquisaHome.css'
 import { useState } from 'react'
 import ListaDoacoes from './components/ListaDoacoes'
 
-export default function Pesquisa() {
+export default function PesquisaHome() {
 
     const { handleSubmit, reset, register } = useForm()
     const [doacoes, setDoacoes] = useState([])
@@ -32,8 +32,8 @@ export default function Pesquisa() {
         <div>
             <section className='container01'>
                 <div className='texto'>
-                    <h1>Doações Disponíveis</h1>
-                    <p>Veja as ofertas e pedidos de doação mais recentes da nossa comunidade</p>
+                    <h1>Pesquisar Doações </h1>
+                    <img src="pesquisa.png"/>
                 </div>
                 </section>
             <div className='cardPesquisaHome'>

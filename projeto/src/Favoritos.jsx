@@ -3,6 +3,9 @@ import Cabecalho from './components/Cabecalho'
 import './Favoritos.css'
 import { useEffect, useState } from 'react'
 import ListaDoacoes from './components/ListaDoacoes'
+import { Link } from 'react-router-dom';
+import Footer from './components/Footer'
+
 
 export default function Favoritos() {
   const [doacoes, setDoacoes] = useState([])
@@ -63,10 +66,20 @@ export default function Favoritos() {
     <div className='favoritos'>
       <Cabecalho />
       <main className="favoritos-main">
-        <h1>Favoritos</h1>
+        <h1 className='titulo'>Meus Favoritos <img src="fav_icon.png"/></h1>
+        
 
         {favoritosDoacoes.length === 0 ? (
-          <p>Nenhuma doação favoritada.</p>
+          <div className='semfavoritos'>
+            <img src="/semfavoritos.png" className='coracaoquebrado'/>
+            <h3>Nenhum favorito ainda</h3>
+            <p>Comece a salvar doações que te interessam clicando no ícone de coração</p>
+            <div className="botao">
+              <Link to="/">
+               <img src="/heart.png" alt="Home"/>
+              </Link>
+            </div>
+          </div>
         ) : (
           <div className='doacao-card'>
             {favoritosDoacoes.map(doacao => (
@@ -83,8 +96,8 @@ export default function Favoritos() {
                     <p>{doacao.descricao}</p>
                   </div>
                   <div className="acoes">
-                    <button className='contato_button'>Entrar em contato <img src="/contato.png" alt="contato" /></button>
-
+                    <button className='contato_button'>
+                      <a href="https://wa.me/">Entrar em contato <img src="/contato.png" alt="contato" /></a></button>
                     {favoritos.includes(doacao.id) ? 
                     <button onClick={() => desfavoritaDoacao(doacao.id)} className='btn-favorito-destaque'>
                       <img src="/unfav_icon.png" alt="Remover favorito" />
@@ -101,6 +114,7 @@ export default function Favoritos() {
           </div>
         )}
       </main>
+      <Footer />
     </div>
   )
 }

@@ -1,0 +1,170 @@
+.textos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    margin: 0 2rem;
+}
+.textos h1{
+    font-size: 2.5rem;
+}
+.textos p{
+    font-size: 1.5rem;
+    color: rgb(87, 87, 87);
+}
+
+.sobrenos-main{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20rem;
+    background-color: rgb(228, 228, 228);
+}
+.doeaqui{
+    color:#1273E0;
+}
+.missao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 10rem 2rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem 3rem;
+    border: 2px solid rgb(144, 145, 190);
+    border-radius: 8px;
+}
+
+.missao h2{
+    font-size: 2.4rem;
+}
+.missao p{
+    color: rgb(87, 87, 87);
+    font-size: 1.3rem;
+}
+.missao img{
+    width: 6rem;
+}
+.valores{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+.valores h2{
+    font-size: 2.4rem;
+}
+.valores-paragrafo{
+    color: rgb(87, 87, 87);
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+}
+.valores-cards{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.card01{
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid rgb(144, 145, 190);
+}
+.card01 img{
+    width: 60px;
+    background-color: #74b1f657;
+    padding: 5px;
+    border-radius: 9px;
+}
+.card01 h3{
+    padding: 1.3rem 0 0.5rem;
+    font-size: 1.4rem;
+    color: #093c77;
+}
+.card01 p{
+    color: rgb(87, 87, 87);
+    font-size: 1.2rem;
+}
+.comofunciona{
+    text-align: center;
+    border: 1px solid blue;
+    margin: 2rem;
+    border-radius: 1rem;
+    border: 2px solid rgb(144, 145, 190);
+}
+.titulo{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+.titulo p{
+    color: rgb(87, 87, 87);
+    font-size: 1.2rem
+}
+.titulo h2{
+    font-size: 1.8rem;
+    color: #093c77;
+}
+.passo01{
+    display: flex;
+    gap: 6px;
+    justify-content: start;
+    padding: 1rem 1rem;
+
+}
+.passo01 h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #2786f3c9;
+    width: 70px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 0 2px 0 0;
+    
+}
+.passo01 div{
+    text-align: start;
+    padding-left: 0.4rem;
+}
+.passo01 h3{
+    font-size: 1.3rem;
+    color: #093c77;
+}
+.passo01 p{
+    color: rgb(87, 87, 87);
+    font-size: 1.2rem;
+}
+@media (min-width: 769px) {
+    .missao{
+        margin: 10rem 8rem;
+        padding: 6rem 4rem;
+        gap: 2rem;
+    }
+    .valores-cards{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 2rem;
+    }
+    .card01{
+        width: 300px;
+    }
+    .passo01{
+        display: flex;
+        align-items: start;
+        
+    }
+    .comofunciona{
+        margin: 10rem 20rem;
+        padding: 3rem 6rem;
+    }
+    
+}

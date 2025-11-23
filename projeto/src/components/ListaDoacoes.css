@@ -146,13 +146,19 @@
   width: 95%; 
   border: none;
   border-radius: 0.7rem;
+  
+}
+.contato_button a{
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  gap: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
 }
-
-.acoes {
+.acoes{
   display: flex;
   align-items: center;
   gap: 5px;

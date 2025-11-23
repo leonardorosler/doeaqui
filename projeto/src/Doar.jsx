@@ -4,6 +4,7 @@ import './Doar.css'
 import ListaDoacoes from './components/ListaDoacoes'
 import { useForm } from 'react-hook-form'
 import PesquisaHome from './PesquisaHome'
+import Footer from './components/Footer'
 
 export default function Doar() {
     const [doacoes, setDoacoes] = useState([]);
@@ -14,6 +15,7 @@ export default function Doar() {
         const categoria = data.categoria
         const localizacao = data.localizacao
         const doador = data.doador
+        const whatsapp = data.whatsapp
         const descricao = data.descricao
         const tipo = "Oferta"
 
@@ -22,7 +24,7 @@ export default function Doar() {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    item, categoria, localizacao, doador, descricao, tipo
+                    item, categoria, localizacao, doador, whatsapp, descricao, tipo
                 })
             })
             if (!resposta.ok) throw new Error("Erro ao cadastrar doação")
@@ -42,7 +44,7 @@ export default function Doar() {
         <div>
             <Cabecalho />
             <main className='main-doar'>
-                <h1>Formulário de Doação</h1>
+                <h1>Doar Agora <img src="doar.png"/></h1>
                 <form onSubmit={handleSubmit(cadastraDoacao)}>
                     <p>
                         <label htmlFor="item">O que deseja doar hoje?</label>
@@ -70,6 +72,10 @@ export default function Doar() {
                         <input type="text" id="doador"{...register("doador")} placeholder='Seu nome' required/>
                     </p>
                     <p>
+                        <label htmlFor="whatsapp">Número de whatsapp para contato: (com DDD)</label>
+                        <input type="text" id="whatsapp" {...register("whatsapp")} placeholder='Ex: 53999882722' required/>
+                    </p>
+                    <p>
                         <label htmlFor="descricao">Descrição:</label>
                         <textarea id="descricao" rows={3}{...register("descricao")}placeholder='Descreva o item em detalhes'required></textarea>
                     </p>
@@ -79,6 +85,7 @@ export default function Doar() {
             </main>
             {/* <ListaDoacoes doacoes={doacoes} setDoacoes={setDoacoes} /> */}
             <PesquisaHome />
+            <Footer />
         </div>
     )
 }
