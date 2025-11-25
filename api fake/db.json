@@ -1,3 +1,4 @@
+
 {
   "doacoes": [
     {
@@ -39,6 +40,116 @@
       "whatsapp": "53999930353",
       "descricao": "Precisamos de eletrodomésticos como geladeira e fogão, pois perdemos na enchente",
       "tipo": "Pedido"
+    },
+    {
+      "id": "dbef",
+      "item": "Brinquedos",
+      "categoria": "Brinquedos",
+      "localizacao": "Canguçu - RS",
+      "doador": "Marcelo Silva",
+      "whatsapp": "53999930353",
+      "descricao": "Brinquedos pouco usados em ótimo estado.",
+      "tipo": "Oferta"
+    },
+    {
+      "id": "5a1",
+      "item": "Livros infantis educativos",
+      "categoria": "Livros",
+      "localizacao": "Rio Grande - RS",
+      "doador": "ONG Sorrisos do Amanhã",
+      "whatsapp": "53999930353",
+      "descricao": "Coleção com 12 livros ilustrados para crianças de 5 a 10 anos",
+      "tipo": "Oferta"
+    },
+    {
+      "id": "5a2",
+      "item": "Cobertores e mantas",
+      "categoria": "Roupas",
+      "localizacao": "Capão do Leão - RS",
+      "doador": "Lar Esperança",
+      "whatsapp": "53999930353",
+      "descricao": "Precisamos de cobertores para famílias em situação de vulnerabilidade",
+      "tipo": "Pedido"
+    },
+    {
+      "id": "5a3",
+      "item": "Mesa de madeira pequeno porte",
+      "categoria": "Móveis",
+      "localizacao": "São Lourenço do Sul - RS",
+      "doador": "Ana Julia Kruger",
+      "whatsapp": "53999930353",
+      "descricao": "Mesa usada, ideal para escritório ou quarto",
+      "tipo": "Oferta"
+    },
+    {
+      "id": "5a4",
+      "item": "Ventilador",
+      "categoria": "Eletrodomésticos",
+      "localizacao": "Arroio Grande - RS",
+      "doador": "Associação Casa Solidária",
+      "whatsapp": "53999930353",
+      "descricao": "Estamos precisando de ventiladores para sala comunitária",
+      "tipo": "Pedido"
+    },
+    {
+      "id": "5a5",
+      "item": "Roupas masculinas tamanhos G/GG",
+      "categoria": "Roupas",
+      "localizacao": "Jaguarão - RS",
+      "doador": "Patrícia Carvalho",
+      "whatsapp": "53999930353",
+      "descricao": "Camisetas e calças usadas, organizadas e lavadas",
+      "tipo": "Oferta"
+    },
+    {
+      "id": "5a6",
+      "item": "Fogão 4 bocas",
+      "categoria": "Eletrodomésticos",
+      "localizacao": "Pelotas - RS",
+      "doador": "ONG Rede Acolher",
+      "whatsapp": "53999930353",
+      "descricao": "Precisamos de fogão para cozinha comunitária",
+      "tipo": "Pedido"
+    },
+    {
+      "id": "5a7",
+      "item": "Livros de literatura",
+      "categoria": "Livros",
+      "localizacao": "Canguçu - RS",
+      "doador": "Fundação Mais Leitura",
+      "whatsapp": "53999930353",
+      "descricao": "10 livros variados, usados mas em ótimo estado",
+      "tipo": "Oferta"
+    },
+    {
+      "id": "5a8",
+      "item": "Carrinho de bebê",
+      "categoria": "Móveis",
+      "localizacao": "Rio Grande - RS",
+      "doador": "Carla Menezes",
+      "whatsapp": "53999930353",
+      "descricao": "Carrinho simples, adequado para uso diário",
+      "tipo": "Pedido"
+    },
+    {
+      "id": "5a9",
+      "item": "Brinquedos educativos",
+      "categoria": "Brinquedos",
+      "localizacao": "Pelotas - RS",
+      "doador": "Associação Criança Viva",
+      "whatsapp": "53999930353",
+      "descricao": "Precisamos de brinquedos sem peças pequenas para crianças pequenas",
+      "tipo": "Pedido"
+    },
+    {
+      "id": "5b0",
+      "item": "Cadeira de escritório",
+      "categoria": "Móveis",
+      "localizacao": "Capão do Leão - RS",
+      "doador": "Instituto Nova Vida",
+      "whatsapp": "53999930353",
+      "descricao": "Cadeira com rodas e ajuste; leve desgaste no estofado",
+      "tipo": "Oferta"
     }
   ]
 }
